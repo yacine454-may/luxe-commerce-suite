@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-luxury.jpg";
@@ -38,21 +39,25 @@ export function HeroSection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold shadow-elegant transition-smooth group"
-            >
-              Explorer la Collection
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/category/mode">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold shadow-elegant transition-smooth group"
+              >
+                Explorer la Collection
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-smooth"
-            >
-              Voir les Nouveautés
-            </Button>
+            <Link to="/category/electronique">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-smooth"
+              >
+                Voir les Nouveautés
+              </Button>
+            </Link>
           </div>
           
           <div className="mt-12 flex items-center space-x-8 text-white/80">
